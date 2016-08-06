@@ -5,7 +5,27 @@
 	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
 </head>
 <body>
+<!-- Here ng-model is a Directive which bind any input field or select foeld or text area with the templete {{}} -->
 <input type="text" ng-model="name"></input>
 <h2>Welcome {{name}}</h2>
+<h1>{{name}}</h1>
+<hr>
+<div ng-controller = 'myController'>
+	<h1>{{author.name}}</h1>
+	<!-- <p>{{auther.designation + 'in' + auther.company + 'and my Salary is' + auther.salary}}</p> -->
+
+
+</div>
+<script>
+function myController($scope) {
+	$scope.author = {
+		'name' : 'Saif-ur-Rehman' ,
+		'designation' : 'Drupal Developer' ,
+		'company' : 'Devtron Genises' ,
+		'salary' : '500000'
+	}
+}
+	
+</script>
 </body>
 </html>
